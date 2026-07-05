@@ -68,9 +68,9 @@ const CommunicationLog = () => {
   if (loading) return <div className="flex justify-center py-12"><Loader2 className="w-6 h-6 animate-spin text-primary" /></div>;
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-5">
       <div className="flex justify-between items-center gap-3 flex-wrap">
-        <div className="flex gap-3">
+        <div className="flex gap-4">
           <Card className="glass-card"><CardContent className="p-3 text-center"><p className="text-lg font-bold">{logs.length}</p><p className="text-[10px] text-muted-foreground">Total</p></CardContent></Card>
           <Card className="glass-card"><CardContent className="p-3 text-center"><p className="text-lg font-bold text-blue-400">{logs.filter(l => l.direction === 'outbound').length}</p><p className="text-[10px] text-muted-foreground">Sent</p></CardContent></Card>
           <Card className="glass-card"><CardContent className="p-3 text-center"><p className="text-lg font-bold text-emerald-400">{logs.filter(l => l.direction === 'inbound').length}</p><p className="text-[10px] text-muted-foreground">Received</p></CardContent></Card>
