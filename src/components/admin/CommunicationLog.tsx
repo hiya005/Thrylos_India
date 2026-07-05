@@ -117,7 +117,7 @@ const CommunicationLog = () => {
                 </div>
                 <div><Label>Subject</Label><Input value={form.subject} onChange={e => setForm({ ...form, subject: e.target.value })} /></div>
                 <div><Label>Message *</Label><Textarea rows={3} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} /></div>
-                <Button onClick={handleSave} className="w-full">Save Log</Button>
+                <Button onClick={handleSave} className="w-full font-medium">Save Log</Button>
               </div>
             </DialogContent>
           </Dialog>
