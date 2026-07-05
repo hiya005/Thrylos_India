@@ -127,7 +127,7 @@ const CommunicationLog = () => {
       {filtered.length === 0 ? (
         <Card className="glass-card"><CardContent className="py-12 text-center"><MessageSquare className="w-12 h-12 text-muted-foreground mx-auto mb-4" /><p className="text-muted-foreground">No communication logs</p></CardContent></Card>
       ) : filtered.map(log => (
-        <Card key={log.id} className="glass-card transition">
+        <Card key={log.id} className="glass-card transition duration-200">
           <CardContent className="p-4">
             <div className="flex items-start gap-3">
               <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${log.direction === 'outbound' ? 'bg-blue-500/20' : 'bg-emerald-500/20'}`}>
