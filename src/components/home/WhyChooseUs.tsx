@@ -4,7 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 const WhyChooseUs = () => {
   const { t } = useLanguage();
-  
+
   const reasons = [
     { icon: Rocket, title: t('fast_delivery'), description: t('fast_delivery_desc') },
     { icon: HeartHandshake, title: t('client_first'), description: t('client_first_desc') },
@@ -23,16 +23,21 @@ const WhyChooseUs = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {reasons.map((r, i) => (
-            <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-              className="glass-card rounded-2xl p-5 sm:p-6 text-center group hover:border-primary/40 transition-all duration-300">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                <r.icon className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="font-semibold text-sm sm:text-base mb-2">{r.title}</h3>
-              <p className="text-xs sm:text-sm text-muted-foreground">{r.description}</p>
-            </motion.div>
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -5, scale: 1.02 }}
+              viewport={{ once: true }}
+              transition={{
+                delay: i * 0.1,
+                duration: 0.3,
+                ease: "easeOut",
+              }}
+              className="glass-card rounded-2xl p-5 sm:p-6 text-center group hover:border-primary/40 transition-all duration-300"
+            >
           ))}
-        </div>
+            </div>
       </div>
     </section>
   );
