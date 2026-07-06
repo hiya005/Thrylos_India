@@ -98,7 +98,7 @@ const CouponManager = () => {
               <div><Label>Max Uses (empty = unlimited)</Label><Input type="number" placeholder="e.g. 100" value={form.max_uses} onChange={e => setForm({ ...form, max_uses: e.target.value })} /></div>
               <div><Label>Expires At</Label><Input type="datetime-local" value={form.expires_at} onChange={e => setForm({ ...form, expires_at: e.target.value })} /></div>
               <div className="flex items-center gap-2"><Switch checked={form.is_active} onCheckedChange={c => setForm({ ...form, is_active: c })} /><Label>Active</Label></div>
-              <Button onClick={handleSave} className="w-full">Create Coupon</Button>
+              <Button onClick={handleSave} className="w-full font-medium">Create Coupon</Button>
             </div>
           </DialogContent>
         </Dialog>
