@@ -135,7 +135,7 @@ const CommunicationLog = () => {
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-1 flex-wrap">
-                  <p className="font-medium text-sm">{log.user_name || 'Unknown'}</p>
+                  <p className="font-semibold text-sm">{log.user_name || 'Unknown'}</p>
                   <Badge variant="outline" className="text-[10px]">
                     {log.type === 'email' ? <Mail className="w-3 h-3 mr-0.5" /> : log.type === 'phone' ? <Phone className="w-3 h-3 mr-0.5" /> : <MessageSquare className="w-3 h-3 mr-0.5" />}
                     {log.type}
