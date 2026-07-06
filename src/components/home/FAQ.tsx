@@ -27,7 +27,7 @@ const FAQ = () => {
             {faqs.map((faq, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}>
                 <AccordionItem value={`faq-${i}`} className="glass-card rounded-xl border border-border/40 px-5 overflow-hidden transition-all duration-300 hover:border-primary/30">
-                  <AccordionTrigger className="text-sm sm:text-base font-medium py-4 hover:no-underline text-left">{faq.q}</AccordionTrigger>
+                  <AccordionTrigger className="text-sm sm:text-base font-medium py-4 hover:no-underline text-left transition-colors duration-200">{faq.q}</AccordionTrigger>
                   <AccordionContent className="text-sm text-muted-foreground pb-4 leading-relaxed">{faq.a}</AccordionContent>
                 </AccordionItem>
               </motion.div>
