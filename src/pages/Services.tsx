@@ -85,7 +85,7 @@ const Services = () => {
                       tabIndex={0}
                       onClick={() => handleServiceClick(service.id)}
                       onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') handleServiceClick(service.id); }}
-                      className="glass-card rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 group cursor-pointer"
+                      className="glass-card rounded-xl overflow-hidden hover:border-primary/50 focus-visible:ring-2 focus-visible:ring-primary/50 transition-all duration-300 group cursor-pointer"
                     >
                       <div className="p-4 sm:p-6 space-y-3 sm:space-y-4">
                         <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors overflow-hidden">
