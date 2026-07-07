@@ -88,7 +88,7 @@ const Services = () => {
                       className="glass-card rounded-xl overflow-hidden hover:border-primary/50 focus-visible:ring-2 focus-visible:ring-primary/50 transition-all duration-300 group cursor-pointer"
                     >
                       <div className="p-4 sm:p-6 space-y-3 sm:space-y-4">
-                        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors overflow-hidden">
+                        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20transition-all duration-300 group-hover:scale-105 overflow-hidden">
                           {isImageUrl(service.icon) ? (
                             <img src={service.icon} alt={service.title} className="w-8 h-8 sm:w-9 sm:h-9 object-contain" />
                           ) : (
