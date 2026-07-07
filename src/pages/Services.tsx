@@ -97,7 +97,7 @@ const Services = () => {
                         </div>
                         <h3 className="text-lg sm:text-xl font-semibold">{service.title}</h3>
                         <p className="text-xs sm:text-sm text-muted-foreground">{service.description}</p>
-                        <ul className="space-y-1.5 sm:space-y-2">
+                        <ul className="space-y-2 sm:space-y-2.5>
                           {service.features.map((feature, index) => (
                             <li key={index} className="flex items-center gap-2 text-xs sm:text-sm">
                               <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary flex-shrink-0" />
