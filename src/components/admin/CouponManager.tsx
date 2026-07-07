@@ -77,7 +77,7 @@ const CouponManager = () => {
   if (loading) return <div className="flex justify-center py-12"><Loader2 className="w-8 h-8 animate-spin text-primary" /></div>;
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-5">
       <div className="flex justify-end">
         <Dialog open={dialog} onOpenChange={setDialog}>
           <DialogTrigger asChild><Button><Plus className="w-4 h-4 mr-2" />Create Coupon</Button></DialogTrigger>
