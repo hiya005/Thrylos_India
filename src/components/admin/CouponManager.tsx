@@ -124,7 +124,7 @@ const CouponManager = () => {
                         {coupon.discount_type === 'percentage' ? `${coupon.discount_value}% OFF` : `₹${coupon.discount_value} OFF`}
                       </p>
                     </div>
-                    <Button size="icon" variant="ghost" onClick={() => deleteCoupon(coupon.id)}>
+                    <Button size="icon" variant="outline" onClick={() => deleteCoupon(coupon.id)}>
                       <Trash2 className="w-4 h-4 text-destructive" />
                     </Button>
                   </div>
