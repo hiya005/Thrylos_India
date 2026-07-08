@@ -89,7 +89,7 @@ const About = () => {
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {team.map((member) => (
               <div key={member.id} className="text-center group">
-                <div className="w-20 h-20 sm:w-32 sm:h-32 mx-auto mb-3 sm:mb-4 rounded-full overflow-hidden border-2 border-border group-hover:border-primary transition-colors">
+                <div className="w-20 h-20 sm:w-32 sm:h-32 mx-auto mb-3 sm:mb-4 rounded-full overflow-hidden border-2 border-border group-hover:border-primary group-hover:scale-105 transition-all duration-300">
                   {member.image_url ? <img src={member.image_url} alt={member.name} className="w-full h-full object-cover" /> : <div className="w-full h-full bg-muted flex items-center justify-center"><Users className="w-8 h-8 sm:w-12 sm:h-12 text-muted-foreground" /></div>}
                 </div>
                 <h3 className="font-semibold text-sm sm:text-base">{member.name}</h3>
