@@ -118,7 +118,7 @@ const CouponManager = () => {
                     <div>
                       <div className="flex items-center gap-2 mb-1">
                         <Tag className="w-4 h-4 text-primary" />
-                        <span className="font-bold text-lg font-mono">{coupon.code}</span>
+                        <span className="font-bold text-xl font-mono">{coupon.code}</span>
                       </div>
                       <p className="text-sm text-primary font-semibold">
                         {coupon.discount_type === 'percentage' ? `${coupon.discount_value}% OFF` : `₹${coupon.discount_value} OFF`}
