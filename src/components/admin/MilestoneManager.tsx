@@ -104,7 +104,7 @@ const MilestoneManager = ({ requestId, requestTitle }: { requestId: string; requ
               <div><Label>Title *</Label><Input value={form.title} onChange={e => setForm({ ...form, title: e.target.value })} placeholder="e.g. Design mockup approval" /></div>
               <div><Label>Description</Label><Textarea rows={2} value={form.description} onChange={e => setForm({ ...form, description: e.target.value })} /></div>
               <div><Label>Due Date</Label><Input type="date" value={form.due_date} onChange={e => setForm({ ...form, due_date: e.target.value })} /></div>
-              <Button onClick={handleCreate} className="w-full" disabled={!form.title.trim()}>Add Milestone</Button>
+              <Button onClick={handleCreate} className="w-full font-medium" disabled={!form.title.trim()}>Add Milestone</Button>
             </div>
           </DialogContent>
         </Dialog>
