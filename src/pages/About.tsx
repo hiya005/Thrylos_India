@@ -32,7 +32,7 @@ const About = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-4 sm:space-y-6">
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold">{t('about_title')} <span className="gradient-text">THRYLOS INDIA</span></h1>
-            <p className="text-base sm:text-xl text-muted-foreground px-2">{t('about_hero_desc')}</p>
+            <p className="text-base sm:text-xl text-muted-foreground px-2 max-w-2xl mx-auto">{t('about_hero_desc')}</p>
           </div>
         </div>
       </section>
@@ -94,7 +94,7 @@ const About = () => {
                 </div>
                 <h3 className="font-semibold text-sm sm:text-base">{member.name}</h3>
                 <p className="text-xs sm:text-sm text-muted-foreground">{member.role}</p>
-                {member.bio && <p className="text-[10px] sm:text-xs text-muted-foreground mt-1 sm:mt-2 line-clamp-2">{member.bio}</p>}
+                {member.bio && <p rclassName="text-[10px] sm:text-xs text-muted-foreground mt-1 sm:mt-2 leading-relaxed line-clamp-2">{member.bio}</p>}
               </div>
             ))}
           </div>
