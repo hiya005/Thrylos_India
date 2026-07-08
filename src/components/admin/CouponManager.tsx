@@ -104,8 +104,8 @@ const CouponManager = () => {
         </Dialog>
       </div>
 
-      {coupons.length === 0 ? (
-        <Card className="glass-card"><CardContent className="py-12 text-center"><Tag className="w-12 h-12 text-muted-foreground mx-auto mb-4" /><p className="text-muted-foreground">No coupons yet</p></CardContent></Card>
+      {coupons.length === 0 ? <p className="text-muted-foreground">No coupons available</p>
+        <Card className="glass-card"><CardContent className="py-12 text-center"><Tag className="w-12 h-12 text-muted-foreground mx-auto mb-4" /></CardContent></Card>
       ) : (
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {coupons.map(coupon => {
