@@ -239,7 +239,10 @@ const Contacts = () => {
                       <p className="text-sm font-medium">{r.profile?.full_name || 'Anonymous'}</p>
                       <p className="text-xs text-muted-foreground">Pending...</p>
                     </div>
-                    <Badge variant="outline" className="text-yellow-400 border-yellow-400/30">Pending</Badge>
+                    <Badge
+                      variant="outline"
+                      className="text-yellow-400 border-yellow-400/30 bg-yellow-400/5"
+                    >Pending</Badge>
                   </div>
                 ))}
               </TabsContent>
