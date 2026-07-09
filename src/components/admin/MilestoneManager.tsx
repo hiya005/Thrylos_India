@@ -94,7 +94,7 @@ const MilestoneManager = ({ requestId, requestTitle }: { requestId: string; requ
         </div>
         <Dialog open={dialog} onOpenChange={setDialog}>
           <DialogTrigger asChild>
-            <Button size="sm" variant="outline" className="h-7 text-xs">
+            <Button size="sm" variant="outline" className="h-8 text-xs">
               <Plus className="w-3 h-3 mr-1" />Add
             </Button>
           </DialogTrigger>
