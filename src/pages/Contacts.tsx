@@ -154,7 +154,7 @@ const Contacts = () => {
                 {contacts.length === 0 ? (
                   <div className="text-center py-12 glass-card rounded-2xl">
                     <Users className="w-12 h-12 text-muted-foreground/20 mx-auto mb-3" />
-                    <p className="text-muted-foreground mb-4">No contacts yet</p>
+                    <p className="text-muted-foreground mb-4">Start building your network by connecting with other professionals.</p>
                     <Link to="/search"><Button variant="outline"><UserPlus className="w-4 h-4 mr-2" />Find People</Button></Link>
                   </div>
                 ) : contacts.map((c, i) => (
