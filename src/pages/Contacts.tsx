@@ -158,7 +158,7 @@ const Contacts = () => {
                     <Link to="/search"><Button variant="outline"><UserPlus className="w-4 h-4 mr-2" />Find People</Button></Link>
                   </div>
                 ) : contacts.map((c, i) => (
-                  <motion.div key={c.id} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }} className="glass-card rounded-xl p-4">
+                  <motion.div key={c.id} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }} className="glass-card rounded-xl p-4 hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
                     <div className="flex items-center gap-4">
                       <Link to={`/user/${c.profile?.username || c.profile?.account_id}`} className="flex-shrink-0">
                         {c.profile?.avatar_url ? (
