@@ -144,7 +144,7 @@ const MilestoneManager = ({ requestId, requestTitle }: { requestId: string; requ
       ))}
 
       {total === 0 && (
-        <p className="text-xs text-muted-foreground text-center py-2">No milestones yet</p>
+        <p className="text-xs text-muted-foreground text-center py-3">No milestones yet</p>
       )}
     </div>
   );
