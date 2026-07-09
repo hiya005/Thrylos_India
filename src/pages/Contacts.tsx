@@ -162,7 +162,7 @@ const Contacts = () => {
                     <div className="flex items-center gap-4">
                       <Link to={`/user/${c.profile?.username || c.profile?.account_id}`} className="flex-shrink-0">
                         {c.profile?.avatar_url ? (
-                          <img src={c.profile.avatar_url} alt="" className="w-12 h-12 rounded-full object-cover ring-2 ring-border" />
+                          <img src={c.profile.avatar_url} alt="" className="w-12 h-12 rounded-full object-cover ring-2 ring-border transition-transform duration-300 group-hover:scale-105" />
                         ) : (
                           <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">
                             {(c.profile?.full_name || '?').charAt(0)}
