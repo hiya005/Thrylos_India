@@ -140,115 +140,121 @@ const Contacts = () => {
           {loading ? (
             <div className="flex justify-center py-12"><Loader2 className="w-8 h-8 animate-spin text-primary" /></div>
           ) : (
-            <Tabs defaultValue="contacts" className="space-y-4">
-              <TabsList className="grid w-full grid-cols-3">
-                <TabsTrigger value="contacts">Contacts ({contacts.length})</TabsTrigger>
-                <TabsTrigger value="received">
-                  Requests ({pendingReceived.length})
-                  {pendingReceived.length > 0 && <span className="ml-1 w-2 h-2 rounded-full bg-primary inline-block" />}
-                </TabsTrigger>
-                <TabsTrigger value="sent">Sent ({pendingSent.length})</TabsTrigger>
-              </TabsList>
 
-              <TabsContent value="contacts" className="space-y-3">
-                {contacts.length === 0 ? (
-                  <div className="text-center py-12 glass-card rounded-2xl">
-                    <Users className="w-12 h-12 text-muted-foreground/20 mx-auto mb-3" />
-                    <p className="text-muted-foreground mb-4">Start building your network by connecting with other professionals.</p>
-                    <Link to="/search"><Button variant="outline"><UserPlus className="w-4 h-4 mr-2" />Find People</Button></Link>
-                  </div>
-                ) : contacts.map((c, i) => (
-                  <motion.div key={c.id} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }} className="glass-card rounded-xl p-4 hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
-                    <div className="flex items-center gap-4">
-                      <Link to={`/user/${c.profile?.username || c.profile?.account_id}`} className="flex-shrink-0">
-                        {c.profile?.avatar_url ? (
-                          <img src={c.profile.avatar_url} alt="" className="w-12 h-12 rounded-full object-cover ring-2 ring-border transition-transform duration-300 group-hover:scale-105" />
-                        ) : (
-                          <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">
-                            {(c.profile?.full_name || '?').charAt(0)}
-                          </div>
-                        )}
-                      </Link>
-                      <div className="flex-1 min-w-0">
-                        <Link to={`/user/${c.profile?.username || c.profile?.account_id}`} className="font-semibold hover:text-primary transition truncate flex items-center gap-1.5">
-                          {c.profile?.full_name || 'Anonymous'}
-                          {c.profile?.is_verified && <VerifiedBadge verificationType={c.profile?.verification_type} className="w-4 h-4" />}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.25 }}
+            >
+              <Tabs defaultValue="contacts" className="space-y-4">
+                <TabsList className="grid w-full grid-cols-3">
+                  <TabsTrigger value="contacts">Contacts ({contacts.length})</TabsTrigger>
+                  <TabsTrigger value="received">
+                    Requests ({pendingReceived.length})
+                    {pendingReceived.length > 0 && <span className="ml-1 w-2 h-2 rounded-full bg-primary inline-block" />}
+                  </TabsTrigger>
+                  <TabsTrigger value="sent">Sent ({pendingSent.length})</TabsTrigger>
+                </TabsList>
+
+                <TabsContent value="contacts" className="space-y-3">
+                  {contacts.length === 0 ? (
+                    <div className="text-center py-12 glass-card rounded-2xl">
+                      <Users className="w-12 h-12 text-muted-foreground/20 mx-auto mb-3" />
+                      <p className="text-muted-foreground mb-4">Start building your network by connecting with other professionals.</p>
+                      <Link to="/search"><Button variant="outline"><UserPlus className="w-4 h-4 mr-2" />Find People</Button></Link>
+                    </div>
+                  ) : contacts.map((c, i) => (
+                    <motion.div key={c.id} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }} className="glass-card rounded-xl p-4 hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+                      <div className="flex items-center gap-4">
+                        <Link to={`/user/${c.profile?.username || c.profile?.account_id}`} className="flex-shrink-0">
+                          {c.profile?.avatar_url ? (
+                            <img src={c.profile.avatar_url} alt="" className="w-12 h-12 rounded-full object-cover ring-2 ring-border transition-transform duration-300 group-hover:scale-105" />
+                          ) : (
+                            <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">
+                              {(c.profile?.full_name || '?').charAt(0)}
+                            </div>
+                          )}
                         </Link>
-                        {c.profile?.username && <p className="text-xs text-primary font-mono">@{c.profile.username}</p>}
-                        <div className="flex flex-wrap gap-3 mt-2">
-                          {c.profile?.email && (
-                            <a href={`mailto:${c.profile.email}`} className="text-xs text-muted-foreground flex items-center gap-1 hover:text-foreground transition">
-                              <Mail className="w-3 h-3" />{c.profile.email}
-                            </a>
-                          )}
-                          {c.profile?.phone && (
-                            <a href={`tel:${c.profile.phone}`} className="text-xs text-muted-foreground flex items-center gap-1 hover:text-foreground transition">
-                              <Phone className="w-3 h-3" />{c.profile.phone}
-                            </a>
-                          )}
+                        <div className="flex-1 min-w-0">
+                          <Link to={`/user/${c.profile?.username || c.profile?.account_id}`} className="font-semibold hover:text-primary transition truncate flex items-center gap-1.5">
+                            {c.profile?.full_name || 'Anonymous'}
+                            {c.profile?.is_verified && <VerifiedBadge verificationType={c.profile?.verification_type} className="w-4 h-4" />}
+                          </Link>
+                          {c.profile?.username && <p className="text-xs text-primary font-mono">@{c.profile.username}</p>}
+                          <div className="flex flex-wrap gap-3 mt-2">
+                            {c.profile?.email && (
+                              <a href={`mailto:${c.profile.email}`} className="text-xs text-muted-foreground flex items-center gap-1 hover:text-foreground transition">
+                                <Mail className="w-3 h-3" />{c.profile.email}
+                              </a>
+                            )}
+                            {c.profile?.phone && (
+                              <a href={`tel:${c.profile.phone}`} className="text-xs text-muted-foreground flex items-center gap-1 hover:text-foreground transition">
+                                <Phone className="w-3 h-3" />{c.profile.phone}
+                              </a>
+                            )}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </TabsContent>
+                    </motion.div>
+                  ))}
+                </TabsContent>
 
-              <TabsContent value="received" className="space-y-3">
-                {pendingReceived.length === 0 ? (
-                  <div className="text-center py-12 glass-card rounded-2xl">
-                    <Inbox className="w-12 h-12 text-muted-foreground/20 mx-auto mb-3" />
-                    <p className="text-muted-foreground">No pending requests</p>
-                  </div>
-                ) : pendingReceived.map(r => (
-                  <div key={r.id} className="glass-card rounded-xl p-4 flex items-center gap-4">
-                    <Link to={`/user/${r.profile?.username || r.profile?.account_id}`} className="flex-shrink-0">
-                      {r.profile?.avatar_url ? (
-                        <img src={r.profile.avatar_url} alt="" className="w-10 h-10 rounded-full object-cover" />
-                      ) : (
-                        <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">{(r.profile?.full_name || '?').charAt(0)}</div>
-                      )}
-                    </Link>
-                    <div className="flex-1">
-                      <p className="text-sm font-medium">{r.profile?.full_name || 'Anonymous'}</p>
-                      <p className="text-xs text-muted-foreground">wants to connect</p>
+                <TabsContent value="received" className="space-y-3">
+                  {pendingReceived.length === 0 ? (
+                    <div className="text-center py-12 glass-card rounded-2xl">
+                      <Inbox className="w-12 h-12 text-muted-foreground/20 mx-auto mb-3" />
+                      <p className="text-muted-foreground">No pending requests</p>
                     </div>
-                    <div className="flex gap-2">
-                      <Button size="sm" onClick={() => handleAccept(r.id)}><Check className="w-4 h-4" /></Button>
-                      <Button size="sm" variant="outline" onClick={() => handleReject(r.id)}><X className="w-4 h-4" /></Button>
+                  ) : pendingReceived.map(r => (
+                    <div key={r.id} className="glass-card rounded-xl p-4 flex items-center gap-4">
+                      <Link to={`/user/${r.profile?.username || r.profile?.account_id}`} className="flex-shrink-0">
+                        {r.profile?.avatar_url ? (
+                          <img src={r.profile.avatar_url} alt="" className="w-10 h-10 rounded-full object-cover" />
+                        ) : (
+                          <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">{(r.profile?.full_name || '?').charAt(0)}</div>
+                        )}
+                      </Link>
+                      <div className="flex-1">
+                        <p className="text-sm font-medium">{r.profile?.full_name || 'Anonymous'}</p>
+                        <p className="text-xs text-muted-foreground">wants to connect</p>
+                      </div>
+                      <div className="flex gap-2">
+                        <Button size="sm" onClick={() => handleAccept(r.id)}><Check className="w-4 h-4" /></Button>
+                        <Button size="sm" variant="outline" onClick={() => handleReject(r.id)}><X className="w-4 h-4" /></Button>
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </TabsContent>
+                  ))}
+                </TabsContent>
 
-              <TabsContent value="sent" className="space-y-3">
-                {pendingSent.length === 0 ? (
-                  <div className="text-center py-12 glass-card rounded-2xl">
-                    <Inbox className="w-12 h-12 text-muted-foreground/20 mx-auto mb-3" />
-                    <p className="text-muted-foreground">No sent requests</p>
-                  </div>
-                ) : pendingSent.map(r => (
-                  <div key={r.id} className="glass-card rounded-xl p-4 flex items-center gap-4">
-                    <Link to={`/user/${r.profile?.username || r.profile?.account_id}`} className="flex-shrink-0">
-                      {r.profile?.avatar_url ? (
-                        <img src={r.profile.avatar_url} alt="" className="w-10 h-10 rounded-full object-cover" />
-                      ) : (
-                        <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">{(r.profile?.full_name || '?').charAt(0)}</div>
-                      )}
-                    </Link>
-                    <div className="flex-1">
-                      <p className="text-sm font-medium">{r.profile?.full_name || 'Anonymous'}</p>
-                      <p className="text-xs text-muted-foreground">Pending...</p>
+                <TabsContent value="sent" className="space-y-3">
+                  {pendingSent.length === 0 ? (
+                    <div className="text-center py-12 glass-card rounded-2xl">
+                      <Inbox className="w-12 h-12 text-muted-foreground/20 mx-auto mb-3" />
+                      <p className="text-muted-foreground">No sent requests</p>
                     </div>
-                    <Badge
-                      variant="outline"
-                      className="text-yellow-400 border-yellow-400/30 bg-yellow-400/5"
-                    >Pending</Badge>
-                  </div>
-                ))}
-              </TabsContent>
-            </Tabs>
+                  ) : pendingSent.map(r => (
+                    <div key={r.id} className="glass-card rounded-xl p-4 flex items-center gap-4">
+                      <Link to={`/user/${r.profile?.username || r.profile?.account_id}`} className="flex-shrink-0">
+                        {r.profile?.avatar_url ? (
+                          <img src={r.profile.avatar_url} alt="" className="w-10 h-10 rounded-full object-cover" />
+                        ) : (
+                          <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">{(r.profile?.full_name || '?').charAt(0)}</div>
+                        )}
+                      </Link>
+                      <div className="flex-1">
+                        <p className="text-sm font-medium">{r.profile?.full_name || 'Anonymous'}</p>
+                        <p className="text-xs text-muted-foreground">Pending...</p>
+                      </div>
+                      <Badge
+                        variant="outline"
+                        className="text-yellow-400 border-yellow-400/30 bg-yellow-400/5"
+                      >Pending</Badge>
+                    </div>
+                  ))}
+                </TabsContent>
+              </Tabs>
           )}
-        </div>
+            </div>
       </div>
     </MainLayout>
   );
