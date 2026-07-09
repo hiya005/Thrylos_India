@@ -8,7 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
-
+<div ></div>
 interface Milestone {
   id: string;
   service_request_id: string;
@@ -83,7 +83,7 @@ const MilestoneManager = ({ requestId, requestTitle }: { requestId: string; requ
   const progress = total > 0 ? Math.round((completed / total) * 100) : 0;
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Target className="w-4 h-4 text-primary" />
