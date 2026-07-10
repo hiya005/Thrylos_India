@@ -111,7 +111,7 @@ const MilestoneManager = ({ requestId, requestTitle }: { requestId: string; requ
       </div>
 
       {total > 0 && (
-        <div className="w-full bg-muted rounded-full h-1.5">
+        <div className="w-full bg-muted rounded-full h-2">
           <div className="bg-primary h-1.5 rounded-full transition-all" style={{ width: `${progress}%` }} />
         </div>
       )}
