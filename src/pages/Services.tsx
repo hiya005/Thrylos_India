@@ -67,7 +67,7 @@ const Services = () => {
       <section className="py-8 sm:py-16">
         <div className="container mx-auto px-4">
           {loading ? (
-            <div className="flex items-center justify-center py-12">
+            <div className="flex min-h-[300px] items-center justify-center">
               <Loader2 className="w-8 h-8 animate-spin text-primary" />
             </div>
           ) : services.length === 0 ? (
