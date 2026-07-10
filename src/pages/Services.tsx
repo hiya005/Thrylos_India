@@ -58,7 +58,7 @@ const Services = () => {
               Our <span className="gradient-text">Services</span>
             </h1>
             <p className="text-base sm:text-xl text-muted-foreground">
-              Comprehensive technology solutions tailored to accelerate your business growth
+              Empowering businesses with scalable digital solutions designed for long-term growth and innovation.
             </p>
           </div>
         </div>
