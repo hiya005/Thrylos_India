@@ -137,7 +137,7 @@ const MilestoneManager = ({ requestId, requestTitle }: { requestId: string; requ
               </p>
             )}
           </div>
-          <Button size="icon" variant="ghost" className="h-6 w-6 flex-shrink-0" onClick={() => deleteMilestone(m.id)}>
+          <Button size="icon" variant="outline" className="h-6 w-6 flex-shrink-0" onClick={() => deleteMilestone(m.id)}>
             <Trash2 className="w-3 h-3 text-destructive" />
           </Button>
         </div>
