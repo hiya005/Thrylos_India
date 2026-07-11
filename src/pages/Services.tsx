@@ -95,7 +95,7 @@ const Services = () => {
                             <IconComponent className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
                           )}
                         </div>
-                        <h3 className="text-lg sm:text-xl font-semibold">{service.title}</h3>
+                        <h3 className="text-lg sm:text-xl font-semibold tracking-tight">{service.title}</h3>
                         <p className="text-xs sm:text-sm text-muted-foreground">{service.description}</p>
                         <ul className="space-y-2 sm:space-y-2.5>
                           {service.features.map((feature, index) => (
