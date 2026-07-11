@@ -86,7 +86,7 @@ const TaskManager = ({ projectManagers }: { projectManagers: PM[] }) => {
   return (
     <div className="space-y-5">
       <div className="flex justify-between items-center">
-        <div className="flex gap-3">
+        <div className="flex gap-4">
           <Card className="glass-card"><CardContent className="p-3 text-center"><p className="text-lg font-bold text-amber-400">{todo.length}</p><p className="text-[10px] text-muted-foreground">To Do</p></CardContent></Card>
           <Card className="glass-card"><CardContent className="p-3 text-center"><p className="text-lg font-bold text-blue-400">{inProgress.length}</p><p className="text-[10px] text-muted-foreground">In Progress</p></CardContent></Card>
           <Card className="glass-card"><CardContent className="p-3 text-center"><p className="text-lg font-bold text-emerald-400">{done.length}</p><p className="text-[10px] text-muted-foreground">Done</p></CardContent></Card>
