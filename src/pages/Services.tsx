@@ -107,7 +107,7 @@ const Services = () => {
                         </ul>
                         {service.price_range && (
                           <div className="pt-3 sm:pt-4 border-t border-border">
-                            <span className="text-primary font-semibold text-sm sm:text-base">{service.price_range}</span>
+                            <span className="text-primary font-bold text-sm sm:text-base tracking-wide">{service.price_range}</span>
                           </div>
                         )}
                       </div>
