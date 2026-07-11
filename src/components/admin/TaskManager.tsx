@@ -84,7 +84,7 @@ const TaskManager = ({ projectManagers }: { projectManagers: PM[] }) => {
   const done = tasks.filter(t => t.status === 'done');
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-5">
       <div className="flex justify-between items-center">
         <div className="flex gap-3">
           <Card className="glass-card"><CardContent className="p-3 text-center"><p className="text-lg font-bold text-amber-400">{todo.length}</p><p className="text-[10px] text-muted-foreground">To Do</p></CardContent></Card>
