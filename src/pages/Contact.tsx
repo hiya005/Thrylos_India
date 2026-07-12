@@ -36,7 +36,7 @@ const Contact = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-4 sm:space-y-6">
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold">{t('get_in_touch').split(' ').slice(0, -1).join(' ')} <span className="gradient-text">{t('get_in_touch').split(' ').slice(-1)}</span></h1>
-            <p className="text-base sm:text-xl text-muted-foreground">{t('contact_hero_desc')}</p>
+            <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto">{t('contact_hero_desc')}</p>
           </div>
         </div>
       </section>
