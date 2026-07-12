@@ -130,7 +130,10 @@ const Services = () => {
             </p>
             <div className="pt-2 sm:pt-4">
               <Link to="/auth">
-                <Button size="lg" className="group w-full sm:w-auto">
+                <Button 
+                size="lg" 
+                className="group w-full sm:w-auto"
+                >
                   Request a Quote
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
