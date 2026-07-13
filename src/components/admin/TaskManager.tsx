@@ -158,7 +158,7 @@ const TaskManager = ({ projectManagers }: { projectManagers: PM[] }) => {
                 {task.status === 'done' && (
                   <Button size="sm" variant="outline" className="h-7 text-xs" onClick={() => updateStatus(task.id, 'todo')}>Reopen</Button>
                 )}
-                <Button size="icon" variant="ghost" className="h-7 w-7" onClick={() => deleteTask(task.id)}>
+                <Button size="icon" variant="outline" className="h-7 w-7" onClick={() => deleteTask(task.id)}>
                   <Trash2 className="w-3.5 h-3.5 text-destructive" />
                 </Button>
               </div>
