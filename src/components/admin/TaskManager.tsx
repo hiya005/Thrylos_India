@@ -126,7 +126,7 @@ const TaskManager = ({ projectManagers }: { projectManagers: PM[] }) => {
       </div>
 
       {tasks.length === 0 ? (
-        <Card className="glass-card"><CardContent className="py-12 text-center"><p className="text-muted-foreground">No tasks yet</p></CardContent></Card>
+        <Card className="glass-card"><CardContent className="py-12 text-center"><p className="text-muted-foreground">No tasks available</p></CardContent></Card>
       ) : tasks.map(task => (
         <Card key={task.id} className={`glass-card transition duration-200 ${task.status === 'done' ? 'opacity-60' : ''} ${task.priority === 'high' ? 'border-destructive/30' : ''}`}>
           <CardContent className="p-4">
