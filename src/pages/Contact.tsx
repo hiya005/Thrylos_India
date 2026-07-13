@@ -62,7 +62,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="glass-card p-5 sm:p-8 rounded-xl">
+            <div className="glass-card p-5 sm:p-8 rounded-xl shadow-lg">
               <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   <div><label className="text-xs sm:text-sm font-medium mb-1.5 sm:mb-2 block">{t('name')}</label><Input placeholder={t('your_name')} value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} required /></div>
