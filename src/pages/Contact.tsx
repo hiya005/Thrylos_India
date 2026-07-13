@@ -70,10 +70,14 @@ const Contact = () => {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   <div><label className="text-xs sm:text-sm font-medium mb-1.5 sm:mb-2 block">{t('phone')}</label><Input placeholder={t('phone_placeholder')} value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} /></div>
-                  <div><label className="text-xs sm:text-sm font-medium mb-1.5 sm:mb-2 block">{t('subject')}</label><Input placeholder={t('project_inquiry')} value={formData.subject} onChange={(e) => setFormData({ ...formData, subject: e.target.value })} /></div>
+                  <div><label className="text-xs sm:text-sm font-medium mb-1.5 sm:mb-2 block">{t('subject')}</label><Input placeholder="Website Redesign, Mobile App, Branding..." value={formData.subject} onChange={(e) => setFormData({ ...formData, subject: e.target.value })} /></div>
                 </div>
-                <div><label className="text-xs sm:text-sm font-medium mb-1.5 sm:mb-2 block">{t('message')}</label><Textarea placeholder={t('tell_us_project')} rows={4} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} required /></div>
-                <Button type="submit" className="w-full" disabled={loading}>
+                <div><label className="text-xs sm:text-sm font-medium mb-1.5 sm:mb-2 block">{t('message')}</label><Textarea placeholder="Tell us about your project, goals, timeline, and any specific requirements..." rows={4} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} required /></div>
+                <Button
+                  type="submit"
+                  className="w-full transition-all duration-300 hover:shadow-lg"
+                  disabled={loading}
+                >
                   {loading ? t('sending') : (<>{t('send_message')} <Send className="ml-2 w-4 h-4" /></>)}
                 </Button>
               </form>
