@@ -98,7 +98,7 @@ const AdminGlobalSearch = ({ onSelectRequest, onSelectUser, onSelectPayment }: P
                 placeholder="Search users, requests, payments…"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                className="border-0 bg-transparent focus-visible:ring-0 h-8"
+                className="border-0 bg-transparent focus-visible:ring-0 h-9"
               />
               {loading && <Loader2 className="w-4 h-4 animate-spin text-muted-foreground" />}
               <Button variant="ghost" size="icon" className="h-7 w-7" onClick={() => setOpen(false)}><X className="w-4 h-4" /></Button>
