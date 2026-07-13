@@ -55,7 +55,7 @@ const Contact = () => {
                   { icon: Phone, title: t('phone'), value: '+91 9871831555' },
                 ].map(({ icon: Icon, title, value }) => (
                   <div key={title} className="flex items-start gap-3 sm:gap-4 p-3 rounded-lg transition-all duration-300 hover:bg-primary/5">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0"><Icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" /></div>
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 transition-all duration-300 hover:scale-105 hover:bg-primary/20"><Icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" /></div>
                     <div><h3 className="font-semibold text-sm sm:text-base">{title}</h3><p className="text-xs sm:text-sm text-muted-foreground">{value}</p></div>
                   </div>
                 ))}
