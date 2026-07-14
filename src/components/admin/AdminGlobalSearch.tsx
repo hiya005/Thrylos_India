@@ -82,7 +82,7 @@ const AdminGlobalSearch = ({ onSelectRequest, onSelectUser, onSelectPayment }: P
 
   return (
     <>
-      <Button variant="outline" size="sm" onClick={() => setOpen(true)} className="gap-2">
+      <Button variant="outline" size="sm" onClick={() => setOpen(true)} className="gap-2 rounded-lg">
         <Search className="w-3.5 h-3.5" />
         <span className="text-xs">Global Search</span>
         <kbd className="hidden md:inline text-[10px] px-1.5 py-0.5 rounded bg-muted border border-border">⌘K</kbd>
