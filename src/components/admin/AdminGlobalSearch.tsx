@@ -117,7 +117,7 @@ const AdminGlobalSearch = ({ onSelectRequest, onSelectUser, onSelectPayment }: P
                   >
                     <Icon className={`w-4 h-4 ${color} flex-shrink-0`} />
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium truncate">{r.primary}</p>
+                      <p className="text-sm font-semibold truncate">{r.primary}</p>
                       <p className="text-[11px] text-muted-foreground truncate">{r.secondary}</p>
                     </div>
                     <span className={`text-[9px] uppercase px-1.5 py-0.5 rounded bg-muted/50 ${color}`}>{r.type}</span>
