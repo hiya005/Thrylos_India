@@ -90,8 +90,8 @@ const AdminGlobalSearch = ({ onSelectRequest, onSelectUser, onSelectPayment }: P
 
       {open && (
         <div className="fixed inset-0 z-[100] bg-background/80 backdrop-blur-sm flex items-start justify-center pt-20 px-4" onClick={() => setOpen(false)}>
-          <div className="w-full max-w-xl glass-card rounded-xl border border-border shadow-2xl overflow-hidden" onClick={(e) => e.stopPropagation()}>
-            <div className="flex items-center gap-2 p-3 border-b border-border">
+          <div className="w-full max-w-xl glass-card rounded-xl border border-
+            <div className="w-full max-w-2xl glass-card rounded-xl border border-border shadow-2xl overflow-hidden" onClick={(e) => e.stopPropagation()}>
               <Search className="w-4 h-4 text-muted-foreground" />
               <Input
                 autoFocus
