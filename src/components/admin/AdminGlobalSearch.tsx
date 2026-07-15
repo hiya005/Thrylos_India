@@ -105,7 +105,7 @@ const AdminGlobalSearch = ({ onSelectRequest, onSelectUser, onSelectPayment }: P
             </div>
             <div className="max-h-[420px] overflow-y-auto">
               {!query && <p className="text-xs text-muted-foreground text-center py-8">Type at least 2 characters to search</p>}
-              {query && !loading && results.length === 0 && <p className="text-xs text-muted-foreground text-center py-8">No matches</p>}
+              {query && !loading && results.length === 0 && <p className="text-xs text-muted-foreground text-center py-8">No results found</p>}
               {results.map((r, i) => {
                 const Icon = r.type === "user" ? User : r.type === "request" ? FileText : CreditCard;
                 const color = r.type === "user" ? "text-blue-400" : r.type === "request" ? "text-amber-400" : "text-emerald-400";
