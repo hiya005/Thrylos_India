@@ -103,7 +103,7 @@ const AdminGlobalSearch = ({ onSelectRequest, onSelectUser, onSelectPayment }: P
               {loading && <Loader2 className="w-4 h-4 animate-spin text-muted-foreground" />}
               <Button variant="ghost" size="icon" className="h-7 w-7" onClick={() => setOpen(false)}><X className="w-4 h-4" /></Button>
             </div>
-            <div className="max-h-96 overflow-y-auto">
+            <div className="max-h-[420px] overflow-y-auto">
               {!query && <p className="text-xs text-muted-foreground text-center py-8">Type at least 2 characters to search</p>}
               {query && !loading && results.length === 0 && <p className="text-xs text-muted-foreground text-center py-8">No matches</p>}
               {results.map((r, i) => {
