@@ -12,7 +12,7 @@ const Footer = () => {
   if (shouldHide) return null;
 
   return (
-    <div className="bg-card border-t border-border py-8 sm:py-12 col-span-full">
+    <div className="bg-card border-t border-border py-10 sm:py-12 col-span-full">
       <div className="container mx-auto px-4 sm:px-6 text-center">
         <div className="mb-6 sm:mb-8">
           <div className="flex items-center justify-center gap-2 sm:gap-3 mt-4 sm:mt-6 flex-wrap">
