@@ -205,7 +205,7 @@ const Reviews = () => {
               What Our <span className="gradient-text">Clients Say</span>
             </motion.h1>
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-muted-foreground max-w-2xl mx-auto mb-10 text-base sm:text-lg">
-              Real experiences from real clients who trusted Thrylos India
+              Read genuine feedback from businesses and clients who partnered with Thrylos India.
             </motion.p>
           </div>
         </section>
