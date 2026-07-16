@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border pt-7 sm:pt-8">
-          <p className="text-xs sm:text-sm text-muted-foreground">© {new Date().getFullYear()} THRYLOS INDIA. {t('all_rights')}</p>
+          <p className="text-xs sm:text-sm text-muted-foreground tracking-wide">© {new Date().getFullYear()} THRYLOS INDIA. {t('all_rights')}</p>
         </div>
       </div>
     </div>
