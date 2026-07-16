@@ -19,7 +19,7 @@ const Footer = () => {
             <span className="text-sm sm:text-lg text-white font-normal" style={{ fontFamily: 'taberna' }}>A</span>
             <span className="text-sm sm:text-lg font-extrabold tracking-wide bg-gradient-to-r from-orange-500 via-pink-500 to-blue-500 text-transparent bg-clip-text" style={{ fontFamily: "'Merlin', cursive" }}>misterutsav</span>
             <span className="text-sm sm:text-lg text-white font-normal" style={{ fontFamily: 'taberna' }}>PRODUCT</span>
-            <Heart className="h-3 w-3 sm:h-4 sm:w-4 text-red-500 fill-red-500 animate-pulse" />
+            <Heart className="h-4 w-4 sm:h-4 sm:w-4 text-red-500 fill-red-500 animate-pulse" />
           </div>
         </div>
 
