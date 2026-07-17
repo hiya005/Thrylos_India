@@ -271,7 +271,7 @@ const Reviews = () => {
                       <div className="flex flex-col items-center gap-3">
                         <div className="relative">
                           {reviews[current].reviewer_avatar_url ? (
-                            <img src={reviews[current].reviewer_avatar_url!} alt="" className="w-16 h-16 rounded-full object-cover border-2 border-primary/40 shadow-lg" />
+                            <img src={reviews[current].reviewer_avatar_url!} alt="" className="w-16 h-16 rounded-full object-cover border-2 border-primary/40 shadow-lg transition-transform duration-300 hover:scale-105" />
                           ) : (
                             <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-xl font-bold text-primary border-2 border-primary/40">
                               {reviews[current].reviewer_name.charAt(0).toUpperCase()}
