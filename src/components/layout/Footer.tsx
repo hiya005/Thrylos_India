@@ -33,7 +33,7 @@ const Footer = () => {
           ].map((link, i) => (
             <span key={link.href} className="flex items-center gap-3 sm:gap-6">
               {i > 0 && <span className="text-foreground/40 hidden sm:inline">|</span>}
-              <Link to={link.href} className="text-foreground/60 hover:text-primary transition-colors">{link.label}</Link>
+              <Link to={link.href} className="text-foreground/60 hover:text-primary transition-colors font-medium">{link.label}</Link>
             </span>
           ))}
         </div>
