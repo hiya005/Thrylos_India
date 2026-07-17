@@ -52,7 +52,7 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="border-t border-border pt-6 sm:pt-8">
+        <div className="border-t border-border pt-7 sm:pt-8">
           <p className="text-xs sm:text-sm text-muted-foreground">© {new Date().getFullYear()} THRYLOS INDIA. {t('all_rights')}</p>
         </div>
       </div>
