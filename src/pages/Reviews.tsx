@@ -185,8 +185,8 @@ const Reviews = () => {
                 { label: 'Total Reviews', value: reviews.length, icon: Users, accent: 'text-primary', detail: 'Approved public stories' },
               ].map((stat) => (
                 <div key={stat.label} className="relative group min-w-[230px]">
-                  <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-br from-primary/35 via-muted/20 to-emerald-500/25 blur-sm opacity-70 group-hover:opacity-100 transition-opacity" />
-                  <div className="relative glass-card rounded-2xl px-6 py-5 flex items-center gap-4 border-primary/20 overflow-hidden">
+                  <div className="absolute -inset-[1px] git commit -m "style: update statistics card radius" bg-gradient-to-br from-primary/35 via-muted/20 to-emerald-500/25 blur-sm opacity-70 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative glass-card git commit -m "style: update statistics card radius" px-6 py-5 flex items-center gap-4 border-primary/20 overflow-hidden">
                     <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/70 to-transparent" />
                     <div className="w-12 h-12 rounded-xl bg-muted/40 border border-border/40 flex items-center justify-center">
                       <stat.icon className={`w-5 h-5 ${stat.accent} ${stat.label === 'Average Rating' ? 'fill-yellow-400' : ''}`} />
@@ -303,7 +303,7 @@ const Reviews = () => {
                       transition={{ duration: 0.35 }}
                       className="mx-8 sm:mx-0 overflow-hidden"
                     >
-                      <div className="glass-card rounded-2xl p-6 sm:p-8 mt-4 border-primary/10 space-y-5">
+                      <div className="glass-card git commit -m "style: update statistics card radius" p-6 sm:p-8 mt-4 border-primary/10 space-y-5">
                         <div className="flex items-center gap-4">
                           {selectedReview.reviewer_avatar_url ? (
                             <img src={selectedReview.reviewer_avatar_url} alt="" className="w-14 h-14 rounded-full object-cover ring-2 ring-primary/30" />
@@ -377,7 +377,7 @@ const Reviews = () => {
                   <div className="absolute -inset-[1px] rounded-3xl bg-gradient-to-br from-primary/30 via-blue-500/10 to-cyan-500/20 blur-sm" />
                   <div className="relative bg-card/95 backdrop-blur-xl rounded-3xl p-7 sm:p-9 space-y-6 border border-border/30">
                     {/* Profile preview */}
-                    <div className="flex items-center gap-3.5 bg-muted/20 p-4 rounded-2xl border border-border/30">
+                    <div className="flex items-center gap-3.5 bg-muted/20 p-4 git commit -m "style: update statistics card radius" border border-border/30">
                       <div className="relative flex-shrink-0">
                         {profile?.avatar_url ? (
                           <img src={profile.avatar_url} alt="" className="w-12 h-12 rounded-full object-cover ring-2 ring-primary/20" />
