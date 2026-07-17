@@ -186,7 +186,7 @@ const Reviews = () => {
               ].map((stat) => (
                 <div key={stat.label} className="relative group min-w-[230px]">
                   <div className="absolute -inset-[1px] git commit -m "style: update statistics card radius" bg-gradient-to-br from-primary/35 via-muted/20 to-emerald-500/25 blur-sm opacity-70 group-hover:opacity-100 transition-opacity" />
-                  <div className="relative glass-card git commit -m "style: update statistics card radius" px-6 py-5 flex items-center gap-4 border-primary/20 overflow-hidden">
+                  <div className="relative glass-card git commit -m "style: update statistics card radius" px-6 py-5 flex items-center gap-4 border-primary/30 shadow-xl overflow-hidden">
                     <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/70 to-transparent" />
                     <div className="w-12 h-12 rounded-xl bg-muted/40 border border-border/40 flex items-center justify-center">
                       <stat.icon className={`w-5 h-5 ${stat.accent} ${stat.label === 'Average Rating' ? 'fill-yellow-400' : ''}`} />
