@@ -264,7 +264,7 @@ const Reviews = () => {
                           <Star key={i} className={`w-4 h-4 ${i < reviews[current].rating ? 'text-yellow-400 fill-yellow-400' : 'text-muted-foreground/30'}`} />
                         ))}
                       </div>
-                      <p className="text-base sm:text-lg md:text-xl font-medium italic leading-relaxed mb-6 text-foreground/90 line-clamp-4">
+                      <p className="text-base sm:text-lg md:text-xl font-medium italic leading-8 mb-6 text-foreground/90 line-clamp-4">
                         "{reviews[current].review_text}"
                       </p>
 
@@ -327,7 +327,7 @@ const Reviews = () => {
                             <Star key={i} className={`w-5 h-5 ${i < selectedReview.rating ? 'text-yellow-400 fill-yellow-400' : 'text-muted-foreground/30'}`} />
                           ))}
                         </div>
-                        <p className="text-foreground/90 leading-relaxed whitespace-pre-wrap">{selectedReview.review_text}</p>
+                        <p className="text-foreground/90 leading-8 whitespace-pre-wrap">{selectedReview.review_text}</p>
                         {selectedReview.review_images && selectedReview.review_images.length > 0 && (
                           <div className="grid grid-cols-3 gap-3">
                             {selectedReview.review_images.map((img, i) => (
