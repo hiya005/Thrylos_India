@@ -332,7 +332,7 @@ const Reviews = () => {
                           <div className="grid grid-cols-3 gap-3">
                             {selectedReview.review_images.map((img, i) => (
                               <a key={i} href={img} target="_blank" rel="noopener noreferrer">
-                                <img src={img} alt="" className="w-full aspect-square rounded-xl object-cover border border-border/50 hover:opacity-80 transition-opacity" />
+                                <img src={img} alt="" className="w-full aspect-square rounded-xl object-cover border border-border/50 hover:opacity-90 hover:scale-[1.02] transition-opacity" />
                               </a>
                             ))}
                           </div>
