@@ -319,7 +319,7 @@ const Reviews = () => {
                               <p className="font-bold text-lg">{selectedReview.reviewer_name}</p>
                             )}
                             {selectedReview.reviewer_role && <p className="text-sm text-primary">{selectedReview.reviewer_role}</p>}
-                            <p className="text-xs text-muted-foreground mt-1">{new Date(selectedReview.created_at).toLocaleDateString('en-IN', { day: '2-digit', month: 'long', year: 'numeric' })}</p>
+                            <p className="text-xs text-muted-foreground mt-1">{new Date(selectedReview.created_at).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' })}</p>
                           </div>
                         </div>
                         <div className="flex gap-1">
